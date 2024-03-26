@@ -8,10 +8,6 @@
         {
             "name": "James Bell",
             "email": "james@james-bell.co.uk"
-        },
-        {
-            "name": "Dave",
-            "email": "doncineman@gmail.com"
         }
     ],
     "require": { },
