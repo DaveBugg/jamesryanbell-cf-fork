@@ -1,7 +1,7 @@
 {
     "name": "davebugg/jamesryanbell_cf_fork",
     "description": "CloudFlare API - PHP",
-    "version": "1.0.2",
+    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "authors": [
