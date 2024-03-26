@@ -198,9 +198,27 @@ class Settings extends Api
      *
      * @param string $zone_identifier API item identifier tag
      */
-    public function minify($zone_identifier)
+    public function minify($zone_identifier, $value = null)
     {
         return $this->get('zones/'.$zone_identifier.'/settings/minify');
+    }
+
+    /**
+     * Set Minify settings
+     *
+     * @param string $zone_identifier API item identifier tag
+     */
+    public function set_minify($zone_identifier)
+    {
+        $data = [
+            "value" => [
+                "css"  => "on",
+                "html" => "on",
+                "js"   => "on"
+            ]
+        ];
+
+        return $this->patch('zones/'.$zone_identifier.'/settings/minify', $data);
     }
 
     /**
@@ -823,6 +841,15 @@ class Settings extends Api
         ];
 
         return $this->patch('zones/'.$zone_identifier.'/settings/ssl', $data);
+    }
+
+    //  Change SSL/TLS Recommende
+    public function change_ssl_recommender($zone_identifier, $value = null)
+    {
+        $data = [
+            'value' => $value,
+        ];
+        return $this->patch('zones/'.$zone_identifier.'/settings/ssl_recommender', $data);
     }
 
     /**
